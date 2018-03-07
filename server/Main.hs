@@ -16,7 +16,7 @@ main = do
     putStrLn $ "Serving with TLS on port " ++ show port
     withStdoutLogger $ \aplogger -> do
         let settings = setPort port $ setLogger aplogger defaultSettings
-        runTLS theTlsSettings (setHTTP2Disabled  settings) (corsMiddleware app)
+        runTLS theTlsSettings settings (corsMiddleware app)
     where
         port = 443
         theTlsSettings = tlsSettings "/etc/letsencrypt/live/warp.qubit.no/cert.pem" "/etc/letsencrypt/live/warp.qubit.no/privkey.pem" 
