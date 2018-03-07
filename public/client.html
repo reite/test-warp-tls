@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang=en>
+    <head>
+    <meta charset=utf-8>
+    <title>Warp-tls + wai-cors error</title>
+    </head>
+    <body>
+        Open developer tools. We send two requests, one require cors, the other one doesnt.
+    </body>
+    <script>
+        fetch("https://warp.qubit.no/nocors",  {
+            method: "GET",
+            headers: {},
+            cache: 'no-cache',
+            credentials: 'omit',
+            mode: 'cors',
+        })
+        fetch("https://warp.qubit.no/cors",  {
+            method: "GET",
+            headers: {
+                'content-type': 'application/json'
+            },
+            cache: 'no-cache',
+            credentials: 'omit',
+            mode: 'cors',
+        })
+    </script>
+</html>
