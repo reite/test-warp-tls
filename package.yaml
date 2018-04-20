@@ -1,5 +1,5 @@
 name:                test-warp-tls
-version:             0.1.0.0
+version:             0.1.0.1
 github:              "githubuser/test-warp-tls"
 license:             BSD3
 
@@ -40,7 +40,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - test-warp-tls
-    - warp
+    - warp>=3.2.19
     - wai
     - bytestring
     - http-media
