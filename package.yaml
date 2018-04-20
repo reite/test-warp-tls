@@ -25,7 +25,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - test-warp-tls
-    - warp
+    - warp>=3.2.19
     - warp-tls
     - wai
     - wai-cors
@@ -40,7 +40,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - test-warp-tls
-    - warp>=3.2.19
+    - warp
     - wai
     - bytestring
     - http-media
